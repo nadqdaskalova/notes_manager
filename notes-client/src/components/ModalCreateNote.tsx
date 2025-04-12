@@ -7,6 +7,7 @@ import React, { useMemo } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router'
 import routePaths from 'src/config/RoutePaths'
+import { useNotes } from 'src/NotesContext'
 import Colors from 'src/tokens/Colors'
 import Shadows from 'src/tokens/Shadows'
 import Spacings from 'src/tokens/Spacings'
@@ -36,6 +37,7 @@ interface ICreateNoteValues {
 const ModalCreateNote: React.FC<IModalCreateNote> = ({ closeModal, note = {} as any, type = 'create' }) => {
   const navigate = useNavigate()
   const { state } = useAppState()
+  const { updateNoteData, addNote } = useNotes()
 
   const defaultValues = useMemo(
     () => ({
@@ -64,7 +66,9 @@ const ModalCreateNote: React.FC<IModalCreateNote> = ({ closeModal, note = {} as 
     if (type === 'update') {
       updateNote(note?.id, { ...data, userId: state?.user?.id })
         .then(() => {
-          navigate(routePaths.entry)
+          updateNoteData(note?.id, { ...data, userId: state?.user?.id })
+          // navigate(routePaths.entry)
+          closeModal()
           // window.location.reload()
         })
         .catch((err) => {
@@ -74,8 +78,10 @@ const ModalCreateNote: React.FC<IModalCreateNote> = ({ closeModal, note = {} as 
     }
 
     createNote({ ...data, userId: state?.user?.id })
-      .then(() => {
-        navigate(routePaths.entry)
+      .then((noteCreated) => {
+        // navigate(routePaths.entry)
+        addNote({ ...noteCreated })
+        closeModal()
         // window.location.reload()
       })
       .catch((err) => {

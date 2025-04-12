@@ -1031,11 +1031,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nadya/Desktop/notes_manager/notes-server/Notes_Backend/Notes_Backend.csproj",
+      "projectUniqueName": "/Users/nadya/Desktop/vum/vum 2025/notes_manager/notes-server/Notes_Backend/Notes_Backend.csproj",
       "projectName": "Notes_Backend",
-      "projectPath": "/Users/nadya/Desktop/notes_manager/notes-server/Notes_Backend/Notes_Backend.csproj",
+      "projectPath": "/Users/nadya/Desktop/vum/vum 2025/notes_manager/notes-server/Notes_Backend/Notes_Backend.csproj",
       "packagesPath": "/Users/nadya/.nuget/packages/",
-      "outputPath": "/Users/nadya/Desktop/notes_manager/notes-server/Notes_Backend/obj/",
+      "outputPath": "/Users/nadya/Desktop/vum/vum 2025/notes_manager/notes-server/Notes_Backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nadya/.nuget/NuGet/NuGet.Config"

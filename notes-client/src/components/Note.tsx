@@ -2,6 +2,7 @@
 import { Delete } from '@mui/icons-material'
 import { useState } from 'react'
 import { deleteNote } from 'src/helpers/ApiHandler'
+import { useNotes } from 'src/NotesContext'
 import styled from 'styled-components'
 import { useAppState } from '../components/AuthProvider'
 import GenericText from '../components/GenericText'
@@ -13,10 +14,12 @@ import ModalCreateNote from './ModalCreateNote'
 const Note = ({ id, title, description, createdAt, userId }) => {
   const { state } = useAppState()
   const [showCreateNote, setShowCreateNote] = useState(false)
+  const { removeNote } = useNotes()
 
   const handleDeleteNote = () => {
     deleteNote(id)
       .then(() => {
+        removeNote(id)
         setShowCreateNote(false)
         // window.location.reload()
       })

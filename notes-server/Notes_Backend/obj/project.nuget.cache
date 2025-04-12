@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PIKihu72KtG76hvB7K73OCl7FrjHOKxlwwOvrWcLzCb50MFezYyCxZNawzheclmSK18nRLlu/hl4IOPRjMp4/A==",
+  "dgSpecHash": "3q+FS1oAkR0LFEn+G20zDqQ5TqetNAfTYZGS6jqDDVsqpXYqdRXesJHOKbweAVjpTsnzEBTj5spD0vk/eU3gRg==",
   "success": true,
-  "projectFilePath": "/Users/nadya/Desktop/notes_manager/notes-server/Notes_Backend/Notes_Backend.csproj",
+  "projectFilePath": "/Users/nadya/Desktop/vum/vum 2025/notes_manager/notes-server/Notes_Backend/Notes_Backend.csproj",
   "expectedPackageFiles": [
     "/Users/nadya/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/nadya/.nuget/packages/microsoft.entityframeworkcore/7.0.5/microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
